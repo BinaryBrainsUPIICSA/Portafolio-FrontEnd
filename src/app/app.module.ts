@@ -7,10 +7,14 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {SharedModule} from "../shared/modules/shared/shared/shared.module";
+import { BbPlNavegacionComponent } from './components/bb-pl-navegacion/bb-pl-navegacion.component';
+import { BbPlChatbotComponent } from './components/bb-pl-chatbot/bb-pl-chatbot.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BbPlNavegacionComponent,
+    BbPlChatbotComponent
   ],
   imports: [
     BrowserModule,

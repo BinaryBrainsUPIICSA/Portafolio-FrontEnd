@@ -5,4 +5,8 @@ export class AppModules{
     id: 'nombre-modulo',
     description: 'Ejemplo de como hacer un modulo personalizado',
   }
+  static readonly nosotros: ModuleContext = {
+    id: 'nosotros',
+    description: 'Modulo que contiene información de los integrantes',
+  }
 }
