@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-color: #0B0D1CFF;
+  --secondary-color: #cccccc;
+  /* ... define more colors for your default light theme ... */
+}
+.dark-theme {
+  --primary-color: #000000;
+  --secondary-color: #999999;
+  /* ... define more colors for your dark theme ... */
+}
+
+body {
+  /* Default light theme styles */
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  background-image: url('assets/img/background.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-size: 30%; /* Adjust the percentage value as desired */
+}
+.dark-theme body {
+  /* Dark theme styles */
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
