@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: AppModules.nosotros.id,
     loadChildren: () => import('./modules/nosotros/nosotros.module').then(m => m.NosotrosModule)
+  },
+  {
+    path: AppModules.contactanos.id,
+    loadChildren: () => import('./modules/contacto/contacto.module').then(m => m.ContactoModule)
   }
 ];
 
