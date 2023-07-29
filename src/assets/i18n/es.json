@@ -14,5 +14,9 @@
     "eventos": "Eventos",
     "proyectos": "Proyectos",
     "contacto": "Contactanos"
+  },
+  "chatBot": {
+    "bot": "Binary Bot",
+    "online": "Online"
   }
 }
