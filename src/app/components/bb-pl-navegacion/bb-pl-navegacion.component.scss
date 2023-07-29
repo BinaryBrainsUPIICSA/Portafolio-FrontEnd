@@ -1,0 +1,10 @@
+/* Small screen styles (hamburger menu) */
+@media (max-width: 767px) {
+  .hidden.md\:block {
+    display: none !important;
+  }
+
+  .md\:hidden {
+    display: block !important;
+  }
+}
