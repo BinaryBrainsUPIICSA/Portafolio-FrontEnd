@@ -13,6 +13,7 @@ import { BbPlCarrouselComponent } from './components/bb-pl-carrousel/bb-pl-carro
 
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+import {CdkDropList} from "@angular/cdk/drag-drop";
 // register Swiper custom elements
 register();
 
@@ -37,6 +38,7 @@ register();
         deps: [HttpClient],
       },
     }),
+    CdkDropList,
   ],
   providers: [],
   bootstrap: [AppComponent],
