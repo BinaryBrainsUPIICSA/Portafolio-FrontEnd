@@ -1,1 +1,18 @@
-<p>bb-pl-chatbot works!</p>
+<div class="chat-icon" (click)="toggleChat()">
+  <i class="fas fa-comment-alt"></i>
+</div>
+
+<div class="chat-container" *ngIf="isChatOpen" cdkDropList (cdkDropListDropped)="onMessageDropped($event)">
+  <div class="chat-header">
+    <span class="chat-title">Chat con Chatbot</span>
+    <i class="fas fa-times" (click)="toggleChat()"></i>
+  </div>
+  <div class="chat-messages" cdkDrag>
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
+      {{ message.content }}
+    </div>
+  </div>
+  <div class="chat-input">
+    <!-- Aquí puedes agregar un formulario para enviar mensajes -->
+  </div>
+</div>
