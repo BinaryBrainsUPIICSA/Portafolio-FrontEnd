@@ -9,7 +9,7 @@ import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 export class BbPlChatbotComponent {
   messages: Message[] = [
     { content: 'Hola, ¿cómo estás?', isUserMessage: true },
-    { content: '¡Hola! Soy el chatbot.', isUserMessage: false },
+    { content: '¡Hola! Soy el chatbot verción 3.', isUserMessage: false },
     // Agrega más mensajes aquí...
   ];
 
