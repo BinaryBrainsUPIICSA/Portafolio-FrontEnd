@@ -1,18 +1,28 @@
 <div class="chat-icon" (click)="toggleChat()">
-  <i class="fas fa-comment-alt"></i>
+  <img src="assets/img/brain-logo.svg" width="40px">
 </div>
 
 <div class="chat-container" *ngIf="isChatOpen" cdkDropList (cdkDropListDropped)="onMessageDropped($event)">
-  <div class="chat-header">
-    <span class="chat-title">Chat con Chatbot</span>
-    <i class="fas fa-times" (click)="toggleChat()"></i>
+  <div class="flex justify-between border-b-2 border-b-[#54B4D3]">
+    <div class="chat-header">
+      <img src="assets/img/brain-logo.svg" width="64px">
+      <div class="flex flex-col">
+        <span class="chat-title">{{'chatBot.bot' | translate}} V.1</span>
+        <span class="text-[#54B4D3]">{{'chatBot.online' | translate}}</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark p-4 text-[#54B4D3] text-2xl cursor-pointer" (click)="toggleChat()"></i>
   </div>
   <div class="chat-messages" cdkDrag>
-    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
+    <div *ngFor="let message of messages"
+         [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
       {{ message.content }}
     </div>
-  </div>
-  <div class="chat-input">
-    <!-- Aquí puedes agregar un formulario para enviar mensajes -->
+    <div class="flex">
+      <input class="chat-input">
+      <button class="button-chat" type="button">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
   </div>
 </div>
