@@ -15,8 +15,18 @@
     "proyectos": "Proyectos",
     "contacto": "Contactanos"
   },
+  "contactanos": {
+    "contacto": "Contacto",
+    "nombre": "Nombre",
+    "email" : "Correo Electronico",
+    "mensaje" : "Mensaje",
+    "msgErrorNombre" : "No valido",
+    "msgErrorEmail" : "Email no valido",
+    "msgErrorMensaje" : "Deja un mensaje"
+  },
   "chatBot": {
     "bot": "Binary Bot",
     "online": "Online"
   }
+
 }

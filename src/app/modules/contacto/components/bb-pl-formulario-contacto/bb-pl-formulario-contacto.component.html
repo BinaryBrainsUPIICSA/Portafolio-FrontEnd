@@ -1,0 +1,17 @@
+
+    <form [formGroup]="form">
+        <h2>{{'contactanos.contacto' | translate}}</h2>
+        <div class="input-group">
+            <label for="name">{{'contactanos.nombre' | translate}}</label>
+            <input formControlName="nombre" type="text" name="name" id="name" placeholder="Nombre">
+            <div class="msg-error" *ngIf="nombre.invalid && nombre.touched"> {{'contactanos.msgErrorNombre' | translate}} </div>
+            <label for="email">{{'contactanos.email' | translate}}</label>
+            <input formControlName="email" type="email" name="email" id="email" placeholder="Email">
+            <div class="msg-error" *ngIf="email.invalid && email.touched"> {{'contactanos.msgErrorEmail' | translate}} </div>
+            <label for="message">{{'contactanos.mensaje' | translate}}</label>
+            <textarea formControlName="mensaje" name="message" id="message" cols="38" rows="5" placeholder="Mensaje"></textarea>
+            <div class="msg-error" *ngIf="mensaje.invalid && mensaje.touched"> {{'contactanos.msgErrorMensaje' | translate}} </div>
+        </div>
+
+        <input (click)="enviarFormulario()" class="btn" type="submit" value="Enviar">
+    </form>

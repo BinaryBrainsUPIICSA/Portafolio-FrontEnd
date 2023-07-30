@@ -1,0 +1,91 @@
+
+$color-principal: #0B0D1C;
+$color-secundario : #499FC7;
+$white: #FFF;
+$red: #ff0b0b;
+
+
+form {
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.196);
+    border-radius: 25px; 
+    text-align: center;
+    width: 330px;
+    height: 640px;
+    margin: 0 auto;
+}
+
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    color: $white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+label {
+    color: $white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    background-color: $color-principal;
+    border: 3px solid $color-secundario;
+    color: $white;
+    outline: none;
+
+}
+
+.msg-error{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: $white;
+    text-shadow: 0 0 10px $white;
+    margin-top: 5px;
+}
+
+.btn {
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 200px; 
+    border: 0;
+    background-color: $color-secundario;
+    box-shadow: 0 0 15px $color-secundario ;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn:hover{
+    background-color: #499fc7e2;
+}
+
+
+@media(min-width: 1024px){
+    
+    form{
+        width: 800px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+    form{
+        width: 600px;
+    }
+}
+

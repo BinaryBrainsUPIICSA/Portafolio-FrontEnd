@@ -9,4 +9,8 @@ export class AppModules{
     id: 'nosotros',
     description: 'Modulo que contiene información de los integrantes',
   }
+  static readonly contactanos: ModuleContext = {
+    id: 'contactanos',
+    description: 'Modulo que contiene el formulario de contacto',
+  }
 }
