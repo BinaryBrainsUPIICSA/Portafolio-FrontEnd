@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TranslateModule} from "@ngx-translate/core";
 import {OverlayModule} from "@angular/cdk/overlay";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
 
 
@@ -16,7 +16,8 @@ import {MatIconModule} from "@angular/material/icon";
     TranslateModule,
     OverlayModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
