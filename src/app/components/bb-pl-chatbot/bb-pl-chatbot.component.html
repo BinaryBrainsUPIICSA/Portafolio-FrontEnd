@@ -1,1 +1,35 @@
-<p>bb-pl-chatbot works!</p>
+<div class="chat-icon" (click)="toggleChat()">
+  <img src="assets/img/brain-logo.svg" width="40px">
+</div>
+
+<div class="chat-container" *ngIf="isChatOpen" cdkDropList (cdkDropListDropped)="onMessageDropped($event)">
+  <div class="flex justify-between border-b-2 border-b-[#54B4D3]">
+    <div class="chat-header">
+        <img src="assets/img/brain-logo.svg" width="40px">
+      <div class="flex flex-col">
+        <span class="chat-title">{{'chatBot.bot' | translate}} V.1</span>
+        <span class="text-[#54B4D3]">{{'chatBot.online' | translate}}</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark p-4 text-[#54B4D3] text-2xl cursor-pointer" (click)="toggleChat()"></i>
+  </div>
+  <div class="chat-messages" cdkDrag>
+    <div *ngFor="let message of messages" class="flex gap-2 items-center justify-center mb-4">
+      <div class="ml-2 w-[10%]" *ngIf="message.isUserMessage">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
+        {{ message.content }}
+      </div>
+      <div class="w-[10%]" *ngIf="!message.isUserMessage">
+        <img src="assets/img/brain-logo.svg">
+      </div>
+    </div>
+  </div>
+  <div class="flex m-2" [formGroup]="form">
+    <input class="chat-input" formControlName="mensaje">
+    <button class="button-chat" type="button" (click)="sendMesage()" [disabled]="mensaje.invalid">
+      <i class="fa-solid fa-paper-plane"></i>
+    </button>
+  </div>
+</div>

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TranslateModule} from "@ngx-translate/core";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {OverlayModule} from "@angular/cdk/overlay";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatIconModule} from "@angular/material/icon";
 
 
 
@@ -12,7 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     TranslateModule,
+    OverlayModule,
     FormsModule,
+    MatIconModule,
     ReactiveFormsModule
   ]
 })

@@ -12,7 +12,7 @@
     "nosotros": "Nosotros",
     "integrantes": "Integrantes",
     "eventos": "Eventos",
-    "pryectos": "Proyectos",
+    "proyectos": "Proyectos",
     "contacto": "Contactanos"
   },
   "contactanos": {
@@ -23,5 +23,10 @@
     "msgErrorNombre" : "No valido",
     "msgErrorEmail" : "Email no valido",
     "msgErrorMensaje" : "Deja un mensaje"
+  },
+  "chatBot": {
+    "bot": "Binary Bot",
+    "online": "Online"
   }
+
 }
