@@ -1,24 +1,40 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AppModules} from "./routing/app-modules";
+import { AppModules } from './routing/app-modules';
 
 const routes: Routes = [
   {
     path: AppModules.nombreModulo.id,
-    loadChildren: () => import('./modules/nombre-modulo/nombre-modulo.module').then(m => m.NombreModuloModule)
+    loadChildren: () =>
+      import('./modules/nombre-modulo/nombre-modulo.module').then(
+        (m) => m.NombreModuloModule
+      ),
   },
   {
     path: AppModules.nosotros.id,
-    loadChildren: () => import('./modules/nosotros/nosotros.module').then(m => m.NosotrosModule)
+    loadChildren: () =>
+      import('./modules/nosotros/nosotros.module').then(
+        (m) => m.NosotrosModule
+      ),
   },
   {
     path: AppModules.contactanos.id,
-    loadChildren: () => import('./modules/contacto/contacto.module').then(m => m.ContactoModule)
-  }
+    loadChildren: () =>
+      import('./modules/contacto/contacto.module').then(
+        (m) => m.ContactoModule
+      ),
+  },
+  {
+    path: AppModules.proyectos.id,
+    loadChildren: () =>
+      import('./modules/proyectos/proyectos.module').then(
+        (m) => m.ProyectosModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
