@@ -4,6 +4,7 @@ import {TranslateModule} from "@ngx-translate/core";
 import {OverlayModule} from "@angular/cdk/overlay";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
+import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -17,7 +18,8 @@ import {MatIconModule} from "@angular/material/icon";
     OverlayModule,
     FormsModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule
   ]
 })
 export class SharedModule { }
