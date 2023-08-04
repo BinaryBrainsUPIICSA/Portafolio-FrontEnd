@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {animate, AnimationBuilder, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-bb-pl-chatbot',
@@ -20,9 +21,17 @@ export class BbPlChatbotComponent {
     {content: '¡Hola! Soy el chatbot verción 3.', isUserMessage: false},
     // Agrega más mensajes aquí...
   ];
+  animationBuilder: AnimationBuilder;
+  constructor(private _animationBuilder: AnimationBuilder) {
+    this.animationBuilder = _animationBuilder;
+  }
 
   toggleChat(): void {
-    this.isChatOpen = !this.isChatOpen;
+    if (this.isChatOpen) {
+      this.hideChat();
+    } else {
+      this.showChat();
+    }
   }
 
   //futura funcion para controlar desplazamiento del icono
@@ -34,6 +43,25 @@ export class BbPlChatbotComponent {
   sendMesage() {
     this.messages.push({content: this.mensaje.value, isUserMessage: true});
     this.mensaje.setValue('');
+  }
+
+  showChat(): void {
+    this.isChatOpen = true;
+    // const factory = this.animationBuilder.build([
+    //   style({ transform: 'translateY(-100%)', opacity: 0 }),
+    //   animate('0.3s ease-in-out', style({ transform: 'translateY(0)', opacity: 1 })),
+    // ]);
+    // const player = factory.create(document.querySelector('.chat-container'));
+    // player.play();
+  }
+
+  hideChat(): void {
+    this.isChatOpen = false;
+    // const factory = this.animationBuilder.build([
+    //   animate('0.3s ease-in-out', style({ transform: 'translateY(-100%)', opacity: 0 })),
+    // ]);
+    // const player = factory.create(document.querySelector('.chat-container'));
+    // player.play();
   }
 
   //Control de formulario

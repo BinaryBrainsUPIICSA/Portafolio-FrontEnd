@@ -15,16 +15,41 @@
   border: 2px solid #54B4D3;
 }
 
+/* Animation for opening the chat */
 .chat-container {
   position: fixed;
   bottom: 4px;
-  right: 85px;
-  width: 20%;
+  right: 16px;
+  width: 338px;
+  height: 455px;
   background-color: #0B0D1C;
   border: 1px solid #54B4D3;
   border-radius: 3%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 1000;
+
+  &.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Styles for the open chat button */
+.open-chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #54B4D3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1001;
 }
 
 .chat-header {
@@ -35,16 +60,16 @@
   align-items: center;
   border-radius: 10px 10px 0px 0px;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
 }
 
 .chat-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .chat-messages {
-  height: 300px;
+  height: 340px;
   overflow-y: auto;
   padding: 8px;
   border-radius: 0px 0px 10px 10px;
